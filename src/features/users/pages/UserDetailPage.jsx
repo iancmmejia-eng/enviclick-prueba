@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useSearchParams } from 'react-router'
+import { Link, useParams, useSearchParams } from 'react-router'
 import { useMessages } from "../../messages/hooks/useMessages";
 import './UserDetailPage.css';
 import { MessagesTable } from "../../messages/components/messagesTable/MessagesTable";
@@ -15,6 +15,8 @@ function UserDetailPage() {
             return el;
         }
     })
+
+
 
     return (
         <div className="containerCard">
@@ -63,10 +65,17 @@ function UserDetailPage() {
                     </div>
                 </div>
             </article>
+            <div className="buttonReturn">
+                <Link to={`/home`} style={{ textDecoration: 'none' }}>
+                    <p className="moreInfo">Regresar</p> 
+                 </Link>
+            </div>
             {/* <MessageHistory messages={getMessagesByUser(id)} /> */}
              <MessagesTable
                 messages={getMessagesByUser(id)}
                 />
+            
+             
         </div>
     );
 }
