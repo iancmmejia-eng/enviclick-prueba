@@ -10,9 +10,9 @@ function Routers() {
     return(
         <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/home" element={<Dashboard />} />
-            <Route path="/users" element={<UsersPage />} />
-            <Route path="/users/:id" element={<UserDetailPage />} />
+            <Route path="/home"  element={<Dashboard />} />
+            <Route path="/home/users" element={<UsersPage />} />
+            <Route path="/home/users/:id" element={<UserDetailPage />} />
         </Routes>
     );
 }

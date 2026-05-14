@@ -59,7 +59,7 @@ function UserCard ({
                     </div>
                     <div className="card__footer">
                          <div>
-                            <Link to={`/users/${user.id.value}`} style={{ textDecoration: 'none' }}>
+                            <Link to={`/home/users/${user.id.value}`} style={{ textDecoration: 'none' }}>
                             <p className="moreInfo">Ver detalle</p> 
                             </Link>
                         </div>
